@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Mallinabella Salon"
+description = "An elegant salon website with service discovery, appointment booking, client follow-up, and staff tools for scheduling, client records, services, and promotions."
+version = "1.0.0"
+id = "artifacts/mallinabella-salon"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23568
+
+[services.development]
+run = "pnpm --filter @workspace/mallinabella-salon run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mallinabella-salon", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/mallinabella-salon/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23568"
+BASE_PATH = "/"

@@ -1,0 +1,38 @@
+Act as a senior full-stack web developer and UI/UX designer. Build a complete, modern, responsive website and booking management system for "Mallinabella Salon".
+
+### 1. Brand Identity & Visual Aesthetic
+- Style: Elegant, clean, luxurious, and mobile-first.
+- Color Palette: Warm neutrals (rose gold, champagne, deep charcoal, and soft cream accents).
+- Typography: Sophisticated serif headings paired with clean, readable sans-serif body fonts.
+
+### 2. Website Structure & Pages
+1. Public Showcase:
+   - Hero Section: High-impact tagline, salon atmosphere preview, and primary CTA ("Book an Appointment").
+   - Services & Pricing Menu: Filterable categories (Hair Styling, Braiding, Coloring, Treatments, Nails/Spa) with clear descriptions, estimated durations, and prices.
+   - Lookbook / Gallery: Responsive grid showing past client work.
+   - Testimonials & Salon Details: Customer reviews, business hours, address/map, and a direct WhatsApp contact button.
+
+2. Client Booking & Registration Flow:
+   - Step 1: Select service and preferred stylist.
+   - Step 2: Interactive date picker and real-time available time slots (prevent double-booking).
+   - Step 3: Client checkout form capturing: Full Name, Email, Phone/WhatsApp number, and optional appointment notes.
+   - Registration toggle: "Create an account to track appointments and receive exclusive promotions & discounts" (with newsletter opt-in checkbox).
+   - Confirmation: Instant booking confirmation screen with a downloadable calendar invite (.ics).
+
+3. Admin & Staff Dashboard:
+   - Calendar View: Daily and weekly schedule of all upcoming salon appointments.
+   - Client CRM: Table of registered clients with contact info, total visits, and marketing subscription status.
+   - Promotional Campaign Manager: Simple UI to draft an announcement/promo email and blast it to all opted-in clients.
+   - Service Manager: Simple CRUD table to add, update, or adjust prices and service durations.
+
+### 3. Technical Requirements & Architecture
+- Framework: Next.js (App Router) + React + Tailwind CSS.
+- Icons: Lucide React.
+- Database & ORM: PostgreSQL with Prisma ORM (include complete schema models for `User`, `Service`, `Booking`, and `PromotionCampaign`).
+- Email Integration: Resend or Nodemailer mock integration for:
+  a) Instant transactional booking confirmation email.
+  b) 24-hour reminder notification template.
+  c) Promotional newsletter template.
+- State Management & Validation: Zod schemas for all form validations and API routes.
+
+Provide the complete file structure, the Prisma database schema (`schema.prisma`), the primary booking page with real-time slot selection, and the API routes for appointment creation and email dispatching.
